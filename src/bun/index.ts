@@ -42,7 +42,7 @@ const todoRPC = BrowserView.defineRPC<TodoRPC>({
       addTodo: ({ title }) => {
         return db.insert(todoTable).values({
           title,
-          completed: 0
+          completed: 0,
         }) as unknown as Todo;
       },
       updateTodo: async ({ id, title }) => {
