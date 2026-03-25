@@ -106,7 +106,7 @@ function App() {
 			</div>
 
 			{/* 中间内容区域 - 可滚动 */}
-			<div className="flex-1 overflow-y-auto">
+			<div className="flex-1 overflow-y-auto scrollbar-hide">
 				<div className="p-6">
 					{/* 标题 */}
 					<h1 className="text-xl font-bold text-gray-900 mb-4 text-center">
