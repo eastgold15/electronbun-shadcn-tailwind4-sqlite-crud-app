@@ -14,22 +14,8 @@ export default {
     },
     // Ignore Vite output in watch mode — HMR handles view rebuilds separately
     watchIgnore: ["dist/**"],
-    mac: {
-      bundleCEF: false,
-    },
-    linux: {
-      bundleCEF: false,
-    },
     win: {
       bundleCEF: false,
-    },
-    bun: {
-      entrypoint: "src/bun/index.ts",
-    },
-    views: {
-      mainview: {
-        entrypoint: "src/mainview/index.ts",
-      },
     }
   },
 } satisfies ElectrobunConfig;
