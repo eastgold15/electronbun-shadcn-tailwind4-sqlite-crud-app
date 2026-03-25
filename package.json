@@ -1,5 +1,5 @@
 {
-  "name": "electrobun-sqlite-crud",
+  "name": "to-do",
   "version": "1.0.0",
   "type": "module",
   "description": "Electrobun app with SQLite CRUD operations via RPC",

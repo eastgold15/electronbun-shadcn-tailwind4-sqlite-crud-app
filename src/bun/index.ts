@@ -1,7 +1,7 @@
 import { count, desc, eq, sum } from "drizzle-orm";
 import { BrowserView, BrowserWindow, Updater } from "electrobun/bun";
 import type { Todo, TodoRPC } from "../shared/types";
-import { db, todoTable } from './db/index';
+import { db, todoTable, ensureDatabaseReady } from './db/index';
 
 type FilterType = "all" | "active" | "completed";
 
@@ -30,6 +30,9 @@ async function getMainViewUrl(): Promise<string> {
 }
 
 const url = await getMainViewUrl();
+
+// 确保数据库已初始化
+await ensureDatabaseReady();
 
 // Define RPC
 const todoRPC = BrowserView.defineRPC<TodoRPC>({
